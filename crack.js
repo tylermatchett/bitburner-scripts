@@ -7,7 +7,7 @@ export async function main(ns) {
 
   servers.forEach(server => {
     // Zero checks and balances here, no idea what
-    // happens if you run it without all 5 od the scripts
+    // happens if you run it without all 5 of the scripts
     if (!server.access) {
       ns.brutessh(server.host);
       ns.relaysmtp(server.host);
