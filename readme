@@ -2,15 +2,13 @@
 
 ## Overview
 
-Here are the scripts I am currently using in a game called Bitburner. If you are interested in the game, check it out here:
+Here are my own scripts I am currently using in a game called Bitburner. If you are interested in the game, check it out here:
 
-*Bitburner is a programming-based incremental game. Write scripts in JavaScript to automate gameplay, learn skills, play minigames, solve puzzles, and more in this cyberpunk text-based incremental RPG.*
+> *Bitburner is a programming-based incremental game. Write scripts in JavaScript to automate gameplay, learn skills, play minigames, solve puzzles, and more in this cyberpunk text-based incremental RPG.*
 
-Link to the game on steam:
-https://store.steampowered.com/app/1812820/Bitburner/
+You can find the game on [Steam](https://store.steampowered.com/app/1812820/Bitburner/)
 
-Direct link to the game in your browser:
-https://bitburner-official.github.io/
+Or play it directly in your [Browser](https://bitburner-official.github.io/)
 
 ## Brief Description of the Scripts
 
@@ -27,11 +25,15 @@ https://bitburner-official.github.io/
 
 *In the **old/** folder are older scripts used earlier on, just keeping them around for reference.*
 
+### Attribution
+
+I did take two functions from [alainbryden](https://github.com/alainbryden)'s helper.js, they are marked in my utils.js and you can check out his bitburner scripts here: https://github.com/alainbryden/bitburner-scripts
+
 ## ToDo List
 
 We need a script for the following:
 
-1. Stocks
+1. Stocks script
 
 2. Add backdooring servers to the crack.js
 
