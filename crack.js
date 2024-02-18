@@ -4,17 +4,34 @@ import { getAllServers } from 'utils.js'
  * @param {NS} ns */
 export async function main(ns) {
   let servers = getAllServers(ns);
-
+  let availablePrograms = 0;
+  
   servers.forEach(server => {
-    // Zero checks and balances here, no idea what
-    // happens if you run it without all 5 of the scripts
+    availablePrograms = 0;
     if (!server.access) {
-      ns.brutessh(server.host);
-      ns.relaysmtp(server.host);
-      ns.sqlinject(server.host);
-      ns.httpworm(server.host);
-      ns.ftpcrack(server.host);
-      ns.nuke(server.host);
+      if (ns.fileExists('BruteSSH.exe')) {
+        ns.brutessh(server.host);
+        availablePrograms++;
+      }
+      if (ns.fileExists('FTPCrack.exe')) {
+        ns.ftpcrack(server.host);
+        availablePrograms++;
+      }
+      if (ns.fileExists('relaySMTP.exe')) {
+        ns.relaysmtp(server.host);
+        availablePrograms++;
+      }
+      if (ns.fileExists('SQLInject.exe')) {
+        ns.sqlinject(server.host);
+        availablePrograms++;
+      }
+      if (ns.fileExists('HTTPWorm.exe')) {
+        ns.httpworm(server.host);
+        availablePrograms++;
+      }
+
+      if (ns.getServerNumPortsRequired(server.host) <= availablePrograms)
+        ns.nuke(server.host);
     }
   })
 }
